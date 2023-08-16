@@ -7,7 +7,7 @@ function App() {
   const [solution, setSolution] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:3001/solutions')
+    fetch('process.env.SOLUTIONS_API_URL')
       .then(res => res.json())
       .then(json => {
         // random integer between 0-14
